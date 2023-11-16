@@ -3,6 +3,8 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 
+import { App } from '@slack/bolt';
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -111,4 +113,15 @@ export default function Home() {
       </main>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const app = new App({
+    token: '',
+    signingSecret: ''
+  });
+
+  return {
+    props: {},
+  }
 }
