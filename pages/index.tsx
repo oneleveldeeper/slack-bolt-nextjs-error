@@ -116,10 +116,6 @@ export default function Home() {
 }
 
 export async function getServerSideProps() {
-  const app = new App({
-    token: '',
-    signingSecret: ''
-  });
 
   return {
     props: {},
