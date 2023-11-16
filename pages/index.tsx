@@ -116,6 +116,7 @@ export default function Home() {
 }
 
 export async function getServerSideProps() {
+  console.log('App', App);
 
   return {
     props: {},
